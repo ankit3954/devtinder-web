@@ -17,7 +17,9 @@ const UserCard = ({ user }) => {
       );
       dispatch(removeUserFromFeed(userId));
     } catch (err) { 
-      console.error(err)
+      // console.error(err)
+      // This will print the actual text/JSON error message sent from your Express backend
+  console.error("Backend Error Details:", err.response?.data || err.message);
     }
   };
 
